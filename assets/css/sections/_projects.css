@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Projects/Portfolio Section
+   Following BEM methodology
+   ========================================================================== */
+
+.projects {
+  background-color: var(--color-white);
+  position: relative;
+}
+
+/* ========================================
+   Project Filters
+   ======================================== */
+.projects__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-12);
+}
+
+.projects__filter {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  background: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.projects__filter:hover {
+  color: var(--color-primary);
+}
+
+.projects__filter--active {
+  color: var(--color-primary);
+  background-color: rgba(4, 94, 191, 0.1);
+  border-color: var(--color-primary);
+}
+
+/* ========================================
+   Projects Grid
+   ======================================== */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+/* Featured project - larger */
+.projects__item--featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.projects__item--featured .project-card__image {
+  aspect-ratio: 16/12;
+}
+
+.projects__item--featured .project-card__title {
+  font-size: var(--text-3xl);
+}
+
+/* ========================================
+   View More Button
+   ======================================== */
+.projects__more {
+  text-align: center;
+  margin-top: var(--space-12);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects__item--featured {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__item--featured {
+    grid-column: span 1;
+  }
+
+  .projects__filters {
+    gap: var(--space-2);
+  }
+
+  .projects__filter {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+  }
+}
+

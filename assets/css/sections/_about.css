@@ -1,0 +1,192 @@
+/* ==========================================================================
+   About Section
+   Following BEM methodology
+   ========================================================================== */
+
+.about {
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* ========================================
+   About Image Side
+   ======================================== */
+.about__image-wrapper {
+  position: relative;
+}
+
+.about__image {
+  width: 100%;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.about__experience-badge {
+  position: absolute;
+  bottom: var(--space-8);
+  right: calc(-1 * var(--space-8));
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+
+.about__experience-number {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  line-height: 1;
+  display: block;
+}
+
+.about__experience-text {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+  display: block;
+  margin-top: var(--space-1);
+}
+
+/* ========================================
+   About Content Side
+   ======================================== */
+.about__content {
+  max-width: 540px;
+}
+
+.about__label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.about__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-tight);
+}
+
+.about__description {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+/* Feature list */
+.about__features {
+  list-style: none;
+  margin-bottom: var(--space-8);
+}
+
+.about__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.about__feature-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.about__feature-icon svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-text);
+}
+
+/* ========================================
+   Stats Row
+   ======================================== */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.about__stat {
+  text-align: center;
+}
+
+.about__stat-number {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.about__stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .about__image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about__experience-badge {
+    right: var(--space-4);
+    bottom: calc(-1 * var(--space-4));
+  }
+
+  .about__content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about__feature {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .about__experience-badge {
+    padding: var(--space-4);
+  }
+
+  .about__experience-number {
+    font-size: var(--text-4xl);
+  }
+}
+

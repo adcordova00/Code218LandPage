@@ -1,0 +1,344 @@
+# Code218 Landing Page - Development Rules
+
+## 📋 Project Overview
+- **Project Name**: Code218 Landing Page
+- **Type**: Corporate Landing Page for Software Development Company
+- **Stack**: HTML5, CSS3, Vanilla JavaScript
+- **Methodology**: BEM (Block Element Modifier)
+- **CSS Architecture**: 7-1 Pattern (adapted)
+
+---
+
+## 🎨 Brand Colors
+
+### Primary Palette
+| Name | Variable | Hex Code | Usage |
+|------|----------|----------|-------|
+| Blue | `--color-primary` | `#045EBF` | CTAs, headers, links, primary actions |
+| Yellow | `--color-secondary` | `#FFE706` | Highlights, badges, hover effects, accents |
+| Red | `--color-accent` | `#ED2E24` | Alerts, urgency, decorative accents |
+
+### Neutral Palette
+| Name | Variable | Hex Code | Usage |
+|------|----------|----------|-------|
+| Background | `--color-bg` | `#FAFAFA` | Main background (off-white) |
+| Background Alt | `--color-bg-alt` | `#F0F0F0` | Alternate sections |
+| White | `--color-white` | `#FFFFFF` | Cards, pure white elements |
+| Text Dark | `--color-text` | `#1A1A2E` | Main text, headings |
+| Text Muted | `--color-text-muted` | `#6B7280` | Secondary text, descriptions |
+| Border | `--color-border` | `#E5E7EB` | Subtle borders |
+
+### Color Usage Rules
+1. **Blue (#045EBF)** is the DOMINANT brand color - use for primary CTAs and key elements
+2. **Yellow (#FFE706)** is for HIGHLIGHTS - text highlights, hover states, badges
+3. **Red (#ED2E24)** is for ACCENTS - use sparingly for visual interest
+4. Never use all 3 colors with equal weight - maintain hierarchy
+5. Background must always be white/off-white for readability
+
+---
+
+## 🔤 Typography
+
+### Font Families
+```css
+--font-heading: 'Montserrat', sans-serif;
+--font-body: 'Montserrat', sans-serif;
+```
+
+### Font Weights
+- **Bold (700)**: Headings, CTAs, important text
+- **SemiBold (600)**: Subheadings, card titles
+- **Medium (500)**: Body text emphasis
+- **Regular (400)**: Body text, descriptions
+
+### Font Sizes (Desktop)
+```css
+--text-xs: 0.75rem;      /* 12px */
+--text-sm: 0.875rem;     /* 14px */
+--text-base: 1rem;       /* 16px */
+--text-lg: 1.125rem;     /* 18px */
+--text-xl: 1.25rem;      /* 20px */
+--text-2xl: 1.5rem;      /* 24px */
+--text-3xl: 1.875rem;    /* 30px */
+--text-4xl: 2.25rem;     /* 36px */
+--text-5xl: 3rem;        /* 48px */
+--text-6xl: 3.75rem;     /* 60px */
+--text-7xl: 4.5rem;      /* 72px */
+```
+
+### Typography Rules
+1. Ethnocentric font is ONLY for the logo image - never use in web text
+2. All headings use Montserrat Bold
+3. Body text uses Montserrat Regular/Medium
+4. Line height for body: 1.6 | Line height for headings: 1.2
+
+---
+
+## 📐 Spacing System
+
+```css
+--space-1: 0.25rem;   /* 4px */
+--space-2: 0.5rem;    /* 8px */
+--space-3: 0.75rem;   /* 12px */
+--space-4: 1rem;      /* 16px */
+--space-5: 1.25rem;   /* 20px */
+--space-6: 1.5rem;    /* 24px */
+--space-8: 2rem;      /* 32px */
+--space-10: 2.5rem;   /* 40px */
+--space-12: 3rem;     /* 48px */
+--space-16: 4rem;     /* 64px */
+--space-20: 5rem;     /* 80px */
+--space-24: 6rem;     /* 96px */
+--space-32: 8rem;     /* 128px */
+```
+
+---
+
+## 🎯 BEM Methodology
+
+### Naming Convention
+```
+.block {}
+.block__element {}
+.block--modifier {}
+.block__element--modifier {}
+```
+
+### Examples
+```css
+/* Block */
+.card {}
+
+/* Element */
+.card__title {}
+.card__image {}
+.card__content {}
+.card__button {}
+
+/* Modifier */
+.card--featured {}
+.card--horizontal {}
+.card__button--primary {}
+.card__button--secondary {}
+```
+
+### BEM Rules
+1. Block names: lowercase, hyphen-separated (e.g., `service-card`)
+2. Element separator: double underscore `__`
+3. Modifier separator: double hyphen `--`
+4. Never nest more than 2 levels (block__element is max, not block__element__subelement)
+5. Modifiers should be descriptive (e.g., `--large`, `--primary`, `--active`)
+
+---
+
+## 📁 Folder Structure
+
+```
+Code218LandPage/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   ├── base/
+│   │   │   ├── _reset.css          # CSS Reset/Normalize
+│   │   │   ├── _typography.css     # Font imports & text styles
+│   │   │   └── _variables.css      # CSS Custom Properties
+│   │   ├── components/
+│   │   │   ├── _buttons.css        # Button styles
+│   │   │   ├── _cards.css          # Card components
+│   │   │   └── _navbar.css         # Navigation bar
+│   │   ├── layout/
+│   │   │   ├── _header.css         # Header layout
+│   │   │   ├── _footer.css         # Footer layout
+│   │   │   └── _sections.css       # Section containers
+│   │   ├── sections/
+│   │   │   ├── _hero.css           # Hero section
+│   │   │   ├── _services.css       # Services section
+│   │   │   ├── _projects.css       # Portfolio/Projects
+│   │   │   ├── _about.css          # About us section
+│   │   │   └── _contact.css        # Contact section
+│   │   ├── utils/
+│   │   │   └── _animations.css     # Animation keyframes & utilities
+│   │   └── main.css                # Main file (imports all)
+│   ├── js/
+│   │   ├── modules/
+│   │   │   ├── navbar.js           # Navbar functionality
+│   │   │   ├── animations.js       # Scroll animations
+│   │   │   └── form.js             # Form validation
+│   │   └── main.js                 # Main entry point
+│   └── images/
+│       ├── logo.png                # Logo transparent bg
+│       ├── logo-white.png          # Logo for dark backgrounds
+│       └── ...                     # Other images
+└── README.md
+```
+
+---
+
+## 🎨 Visual Design Rules
+
+### Cards & Containers
+```css
+--radius-sm: 0.375rem;   /* 6px */
+--radius-md: 0.5rem;     /* 8px */
+--radius-lg: 0.75rem;    /* 12px */
+--radius-xl: 1rem;       /* 16px */
+--radius-2xl: 1.5rem;    /* 24px */
+--radius-full: 9999px;   /* Pill shape */
+```
+
+### Shadows
+```css
+--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+```
+
+### Transitions
+```css
+--transition-fast: 150ms ease;
+--transition-base: 300ms ease;
+--transition-slow: 500ms ease;
+```
+
+---
+
+## 🖼️ Component Patterns
+
+### Buttons
+- **Primary**: Blue background (#045EBF), white text, hover darkens
+- **Secondary**: Transparent bg, blue border, blue text, hover fills blue
+- **Accent**: Yellow background, dark text (for special CTAs)
+- All buttons: rounded corners, padding 12px 24px minimum
+
+### Cards
+- White background (#FFFFFF)
+- Subtle shadow (shadow-md)
+- Rounded corners (radius-lg)
+- Hover: lift effect (translateY -4px) + increased shadow
+- Optional: colored top border on hover (3px solid primary/secondary/accent)
+
+### Links
+- Default: Blue (#045EBF)
+- Hover: Underline with yellow highlight effect
+- Active sections in nav: Yellow underline
+
+### Icons
+- Primary icons: Blue (#045EBF)
+- Decorative icons: Can use all 3 brand colors
+- Size consistency: 24px for inline, 48px for feature icons
+
+---
+
+## 📱 Responsive Breakpoints
+
+```css
+--breakpoint-sm: 640px;   /* Mobile landscape */
+--breakpoint-md: 768px;   /* Tablets */
+--breakpoint-lg: 1024px;  /* Small laptops */
+--breakpoint-xl: 1280px;  /* Desktops */
+--breakpoint-2xl: 1536px; /* Large screens */
+```
+
+### Mobile-First Approach
+```css
+/* Base styles for mobile */
+.element {}
+
+/* Tablet and up */
+@media (min-width: 768px) {}
+
+/* Desktop and up */
+@media (min-width: 1024px) {}
+
+/* Large desktop */
+@media (min-width: 1280px) {}
+```
+
+---
+
+## ✨ Animation Guidelines
+
+### Animation Library
+- Using **AOS (Animate On Scroll)** for scroll-triggered animations
+- Custom CSS animations for hover effects and micro-interactions
+
+### Allowed Animations
+- Fade in/up/down/left/right
+- Scale (subtle, max 1.05)
+- Slide animations
+- Text reveal effects
+- Hover transforms (translateY, scale)
+- Underline animations for links
+
+### Animation Rules
+1. Keep animations subtle and professional
+2. Duration: 300ms - 600ms for most animations
+3. Use `ease` or `ease-out` timing functions
+4. Respect `prefers-reduced-motion` media query
+5. Don't animate on mobile scroll (performance)
+
+---
+
+## 📄 Landing Page Sections
+
+1. **Header/Navbar** - Sticky, white bg, logo left, nav right
+2. **Hero** - Large headline, subtext, 2 CTAs, decorative shapes
+3. **Services** - Grid of service cards (4-6 services)
+4. **About/Stats** - Company info + animated counters
+5. **Projects/Portfolio** - Showcase of work
+6. **Technologies** - Logo carousel/grid
+7. **Testimonials** - Client quotes
+8. **CTA Section** - Blue background, conversion focus
+9. **Contact** - Form + contact info
+10. **Footer** - Links, social, copyright
+
+---
+
+## ✅ Code Quality Rules
+
+### HTML
+1. Semantic HTML5 tags (header, nav, main, section, article, footer)
+2. Proper heading hierarchy (h1 → h2 → h3, never skip)
+3. Alt text for all images
+4. ARIA labels where needed
+5. Lang attribute on html tag
+
+### CSS
+1. No inline styles
+2. Use CSS custom properties for all colors/spacing
+3. Mobile-first media queries
+4. Group related properties
+5. Comment section separators
+
+### JavaScript
+1. ES6+ syntax
+2. Module pattern for organization
+3. No jQuery - vanilla JS only
+4. Event delegation where possible
+5. Debounce scroll/resize handlers
+
+---
+
+## 🚫 Things to AVOID
+
+1. ❌ Using Ethnocentric font in web (logo only)
+2. ❌ Dark backgrounds (keep it light/white)
+3. ❌ Equal visual weight for all 3 brand colors
+4. ❌ Neon/glow effects (doesn't match brand)
+5. ❌ Overly complex animations
+6. ❌ Generic stock photos
+7. ❌ More than 2 font families
+8. ❌ Inline CSS or JavaScript
+9. ❌ Deep BEM nesting (max 2 levels)
+10. ❌ Non-semantic div soup
+
+---
+
+## 🎯 Design Inspiration
+
+- **Southwest Airlines** - Clean use of primary colors on white
+- **Stripe** - Professional tech aesthetic
+- **Linear** - Modern, clean UI
+- Keep it professional but with personality through the bold color accents
+

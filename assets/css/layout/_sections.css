@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Section Layouts
+   ========================================================================== */
+
+/* ========================================
+   Base Section
+   ======================================== */
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section--dark {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+.section--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ========================================
+   Container
+   ======================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.container--sm {
+  max-width: 800px;
+}
+
+.container--lg {
+  max-width: 1400px;
+}
+
+/* ========================================
+   Grid System
+   ======================================== */
+.grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Flex Utilities
+   ======================================== */
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   Background Decorations
+   ======================================== */
+.section__decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section__decoration--blob-1 {
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(4, 94, 191, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.section__decoration--blob-2 {
+  bottom: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 231, 6, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.section__decoration--lines {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(4, 94, 191, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 94, 191, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Content above decorations */
+.section__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   Spacing Utilities
+   ======================================== */
+.mb-0 { margin-bottom: 0; }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-12 { margin-bottom: var(--space-12); }
+.mb-16 { margin-bottom: var(--space-16); }
+
+.mt-0 { margin-top: 0; }
+.mt-4 { margin-top: var(--space-4); }
+.mt-8 { margin-top: var(--space-8); }
+.mt-12 { margin-top: var(--space-12); }
+
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+

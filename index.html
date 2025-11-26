@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Code218 - Desarrollo de Software a Medida. Transformamos tus ideas en soluciones digitales innovadoras.">
+  <meta name="keywords" content="desarrollo web, software, aplicaciones, Code218, programación">
+  <meta name="author" content="Code218">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Code218 - Desarrollo de Software">
+  <meta property="og:description" content="Transformamos tus ideas en soluciones digitales innovadoras.">
+  <meta property="og:type" content="website">
+  
+  <title>Code218 | Desarrollo de Software a Medida</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/CODE218.ico">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- ========================================
+       Header / Navigation
+       ======================================== -->
+  <header class="header">
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+        <!-- Logo -->
+        <a href="#" class="navbar__logo">
+          <img src="assets/images/CODE218.png" alt="Code218 Logo" class="navbar__logo-img">
+        </a>
+
+        <!-- Navigation Menu -->
+        <ul class="navbar__menu" id="navbar-menu">
+          <li class="navbar__item">
+            <a href="#inicio" class="navbar__link navbar__link--active">Inicio</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#servicios" class="navbar__link">Servicios</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#nosotros" class="navbar__link">Nosotros</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#proyectos" class="navbar__link">Proyectos</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#testimonios" class="navbar__link">Testimonios</a>
+          </li>
+          <li class="navbar__item navbar__cta">
+            <a href="#contacto" class="btn btn--primary">Contáctanos</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar__toggle" id="navbar-toggle" aria-label="Menú">
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Overlay -->
+      <div class="navbar__overlay" id="navbar-overlay"></div>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       Main Content
+       ======================================== -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="inicio">
+      <!-- Background Decorations -->
+      <div class="hero__bg-decoration hero__bg-decoration--grid"></div>
+      <div class="hero__bg-decoration hero__bg-decoration--gradient"></div>
+
+      <div class="hero__container container">
+        <!-- Content Side -->
+        <div class="hero__content" data-aos="fade-right" data-aos-duration="800">
+          <span class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Innovación Digital
+          </span>
+          
+          <h1 class="hero__title">
+            Transformamos ideas en
+            <span class="hero__title-highlight">soluciones digitales</span>
+          </h1>
+          
+          <p class="hero__description">
+            Somos expertos en desarrollo de software a medida. Creamos aplicaciones web, 
+            móviles y sistemas empresariales que impulsan el crecimiento de tu negocio.
+          </p>
+          
+          <div class="hero__buttons">
+            <a href="#contacto" class="btn btn--primary btn--lg">
+              Iniciar Proyecto
+              <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#proyectos" class="btn btn--secondary btn--lg">Ver Proyectos</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="150">0</span>
+              <span class="hero__stat-label">Proyectos Completados</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="50">0</span>
+              <span class="hero__stat-label">Clientes Satisfechos</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="5">0</span>
+              <span class="hero__stat-label">Años de Experiencia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Side -->
+        <div class="hero__visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+          <div class="hero__image-wrapper">
+            <!-- Decorative shapes -->
+            <div class="hero__shape hero__shape--1"></div>
+            <div class="hero__shape hero__shape--2"></div>
+            <div class="hero__shape hero__shape--3"></div>
+            
+            <!-- Main image placeholder - replace with actual image -->
+            <div class="hero__image" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0570e3 100%); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+              </svg>
+            </div>
+
+            <!-- Floating code elements -->
+            <div class="hero__code-float hero__code-float--1">
+              <code>&lt;Code218 /&gt;</code>
+            </div>
+            <div class="hero__code-float hero__code-float--2">
+              <code>{ success: true }</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="servicios">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-header__label">Nuestros Servicios</span>
+          <h2 class="section-header__title">Soluciones a tu medida</h2>
+          <p class="section-header__subtitle">
+            Ofrecemos servicios integrales de desarrollo para llevar tu negocio al siguiente nivel.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <!-- Service Card 1 -->
+          <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Desarrollo Web</h3>
+            <p class="service-card__description">
+              Creamos sitios web y aplicaciones web modernas, responsivas y optimizadas para SEO 
+              que cautivan a tus usuarios.
+            </p>
+          </article>
+
+          <!-- Service Card 2 -->
+          <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Apps Móviles</h3>
+            <p class="service-card__description">
+              Desarrollamos aplicaciones nativas e híbridas para iOS y Android que ofrecen 
+              experiencias excepcionales.
+            </p>
+          </article>
+
+          <!-- Service Card 3 -->
+          <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Software Empresarial</h3>
+            <p class="service-card__description">
+              Sistemas ERP, CRM y soluciones personalizadas que automatizan y optimizan 
+              los procesos de tu empresa.
+            </p>
+          </article>
+
+          <!-- Service Card 4 -->
+          <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">APIs & Backend</h3>
+            <p class="service-card__description">
+              Arquitecturas robustas y escalables con APIs REST y GraphQL que potencian 
+              tus aplicaciones.
+            </p>
+          </article>
+
+          <!-- Service Card 5 -->
+          <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                <path d="M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Consultoría Tech</h3>
+            <p class="service-card__description">
+              Te asesoramos en la elección de tecnologías y arquitecturas para maximizar 
+              el éxito de tu proyecto.
+            </p>
+          </article>
+
+          <!-- Service Card 6 -->
+          <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16,18 22,12 16,6"/>
+                <polyline points="8,6 2,12 8,18"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Mantenimiento</h3>
+            <p class="service-card__description">
+              Soporte continuo, actualizaciones y mejoras para mantener tu software 
+              funcionando al máximo rendimiento.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section section--alt" id="nosotros">
+      <div class="container">
+        <div class="about__container">
+          <!-- Image Side -->
+          <div class="about__image-wrapper" data-aos="fade-right">
+            <div class="about__image" style="background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-2xl);">
+              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                <path d="M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <div class="about__experience-badge">
+              <span class="about__experience-number">5+</span>
+              <span class="about__experience-text">Años de Experiencia</span>
+            </div>
+          </div>
+
+          <!-- Content Side -->
+          <div class="about__content" data-aos="fade-left">
+            <span class="about__label">Sobre Nosotros</span>
+            <h2 class="about__title">
+              Un equipo apasionado por la tecnología
+            </h2>
+            <p class="about__description">
+              En Code218, combinamos creatividad técnica con un profundo entendimiento de las 
+              necesidades empresariales. Nuestro equipo de desarrolladores expertos trabaja 
+              incansablemente para entregar soluciones que superan expectativas.
+            </p>
+
+            <ul class="about__features">
+              <li class="about__feature">
+                <span class="about__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                </span>
+                Metodologías ágiles para entregas rápidas
+              </li>
+              <li class="about__feature">
+                <span class="about__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                </span>
+                Código limpio y documentación completa
+              </li>
+              <li class="about__feature">
+                <span class="about__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                </span>
+                Comunicación constante durante el proyecto
+              </li>
+              <li class="about__feature">
+                <span class="about__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                </span>
+                Soporte post-lanzamiento garantizado
+              </li>
+            </ul>
+
+            <a href="#contacto" class="btn btn--primary">Conoce más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="proyectos">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-header__label">Nuestro Trabajo</span>
+          <h2 class="section-header__title">Proyectos Destacados</h2>
+          <p class="section-header__subtitle">
+            Descubre algunos de los proyectos que hemos desarrollado para nuestros clientes.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="projects__filters" data-aos="fade-up" data-aos-delay="100">
+          <button class="projects__filter projects__filter--active" data-filter="all">Todos</button>
+          <button class="projects__filter" data-filter="web">Web</button>
+          <button class="projects__filter" data-filter="mobile">Móvil</button>
+          <button class="projects__filter" data-filter="enterprise">Empresarial</button>
+        </div>
+
+        <div class="projects__grid">
+          <!-- Project 1 - Featured -->
+          <article class="project-card projects__item--featured" data-aos="fade-up" data-category="web">
+            <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0570e3 100%); width: 100%; height: 100%;"></div>
+            <div class="project-card__overlay">
+              <span class="project-card__category">Aplicación Web</span>
+              <h3 class="project-card__title">E-Commerce Platform</h3>
+              <p class="project-card__description">Plataforma de comercio electrónico completa con pasarela de pagos integrada.</p>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="mobile">
+            <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-secondary) 0%, #e6cf00 100%); width: 100%; height: 100%;"></div>
+            <div class="project-card__overlay">
+              <span class="project-card__category">App Móvil</span>
+              <h3 class="project-card__title">Delivery App</h3>
+              <p class="project-card__description">Aplicación de delivery con seguimiento en tiempo real.</p>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="enterprise">
+            <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-accent) 0%, #c9211a 100%); width: 100%; height: 100%;"></div>
+            <div class="project-card__overlay">
+              <span class="project-card__category">Software Empresarial</span>
+              <h3 class="project-card__title">Sistema ERP</h3>
+              <p class="project-card__description">Sistema de gestión empresarial integral.</p>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="web">
+            <div class="project-card__image" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); width: 100%; height: 100%;"></div>
+            <div class="project-card__overlay">
+              <span class="project-card__category">Aplicación Web</span>
+              <h3 class="project-card__title">Dashboard Analytics</h3>
+              <p class="project-card__description">Panel de control con visualización de datos en tiempo real.</p>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="mobile">
+            <div class="project-card__image" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); width: 100%; height: 100%;"></div>
+            <div class="project-card__overlay">
+              <span class="project-card__category">App Móvil</span>
+              <h3 class="project-card__title">Fitness Tracker</h3>
+              <p class="project-card__description">Aplicación de seguimiento de actividad física.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects__more" data-aos="fade-up">
+          <a href="#" class="btn btn--secondary">Ver todos los proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies section section--alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-header__label">Tecnologías</span>
+          <h2 class="section-header__title">Stack Tecnológico</h2>
+          <p class="section-header__subtitle">
+            Trabajamos con las tecnologías más modernas y demandadas del mercado.
+          </p>
+        </div>
+
+        <div class="technologies__carousel" data-aos="fade-up" data-aos-delay="100">
+          <div class="technologies__track">
+            <!-- First set of logos -->
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">React</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">Node.js</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">Python</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">TypeScript</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">PostgreSQL</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">MongoDB</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">AWS</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">Docker</span>
+            </div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">React</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">Node.js</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">Python</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">TypeScript</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">PostgreSQL</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">MongoDB</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">AWS</span>
+            </div>
+            <div class="technologies__item">
+              <span style="font-weight: bold; color: var(--color-text);">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonios">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-header__label">Testimonios</span>
+          <h2 class="section-header__title">Lo que dicen nuestros clientes</h2>
+          <p class="section-header__subtitle">
+            La satisfacción de nuestros clientes es nuestra mayor recompensa.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="testimonial-card__quote">"</span>
+            <p class="testimonial-card__content">
+              El equipo de Code218 superó todas nuestras expectativas. Entregaron un producto 
+              de calidad excepcional en tiempo récord. Sin duda volveremos a trabajar juntos.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">MC</div>
+              <div class="testimonial-card__info">
+                <span class="testimonial-card__name">María González</span>
+                <span class="testimonial-card__role">CEO, TechStartup</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="testimonial-card__quote">"</span>
+            <p class="testimonial-card__content">
+              Profesionales de primer nivel. La comunicación fue excelente durante todo el 
+              proyecto y el resultado final fue exactamente lo que necesitábamos.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: var(--color-accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CR</div>
+              <div class="testimonial-card__info">
+                <span class="testimonial-card__name">Carlos Rodríguez</span>
+                <span class="testimonial-card__role">Director, LogisCorp</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <span class="testimonial-card__quote">"</span>
+            <p class="testimonial-card__content">
+              Nuestra app móvil fue todo un éxito gracias a Code218. Su expertise técnico 
+              y atención al detalle marcaron la diferencia en nuestro lanzamiento.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: var(--color-secondary); display: flex; align-items: center; justify-content: center; color: var(--color-text); font-weight: bold;">AL</div>
+              <div class="testimonial-card__info">
+                <span class="testimonial-card__name">Ana López</span>
+                <span class="testimonial-card__role">Product Manager, AppVentures</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section">
+      <!-- Background Decorations -->
+      <div class="cta__decoration cta__decoration--pattern"></div>
+      <div class="cta__decoration cta__decoration--1"></div>
+      <div class="cta__decoration cta__decoration--2"></div>
+
+      <div class="container">
+        <div class="cta__container" data-aos="fade-up">
+          <h2 class="cta__title">¿Listo para comenzar tu proyecto?</h2>
+          <p class="cta__description">
+            Conversemos sobre tu idea y cómo podemos ayudarte a hacerla realidad. 
+            La primera consulta es sin compromiso.
+          </p>
+          <div class="cta__buttons">
+            <a href="#contacto" class="btn btn--accent btn--lg">Solicitar Cotización</a>
+            <a href="#" class="btn btn--white btn--lg">Agendar Llamada</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contacto">
+      <div class="container">
+        <div class="contact__container">
+          <!-- Info Side -->
+          <div class="contact__info" data-aos="fade-right">
+            <span class="contact__label">Contacto</span>
+            <h2 class="contact__title">Hablemos de tu proyecto</h2>
+            <p class="contact__description">
+              Estamos aquí para ayudarte. Completa el formulario o contáctanos directamente 
+              por cualquiera de nuestros canales.
+            </p>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact__detail-content">
+                  <span class="contact__detail-label">Email</span>
+                  <span class="contact__detail-value">
+                    <a href="mailto:info@code218.com">info@code218.com</a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact__detail-content">
+                  <span class="contact__detail-label">Teléfono</span>
+                  <span class="contact__detail-value">
+                    <a href="tel:+593992641539">+593 99 264 1539</a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact__detail-content">
+                  <span class="contact__detail-label">Ubicación</span>
+                  <span class="contact__detail-value">Loja, Ecuador</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__social">
+              <a href="https://www.linkedin.com/in/acordova218" class="contact__social-link" aria-label="LinkedIn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/adcordova00" class="contact__social-link" aria-label="Twitter" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/adcordova00" class="contact__social-link" aria-label="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Side -->
+          <div class="contact__form-wrapper" data-aos="fade-left">
+            <form class="contact__form" id="contact-form">
+              <div class="form-group form-group--row">
+                <div class="form-group">
+                  <label for="name" class="form-label form-label--required">Nombre</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label form-label--required">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Asunto</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="¿En qué podemos ayudarte?">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label form-label--required">Mensaje</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--full contact__form-submit">
+                Enviar Mensaje
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22,2 15,22 11,13 2,9"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+       Footer
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <img src="assets/images/CODE218.png" alt="Code218" class="footer__logo">
+          <p class="footer__description">
+            Transformamos ideas en soluciones digitales innovadoras. 
+            Tu socio tecnológico de confianza.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/acordova218" class="footer__social-link" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/adcordova00" class="footer__social-link" aria-label="Twitter" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/adcordova00" class="footer__social-link" aria-label="GitHub" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav: Services -->
+        <nav class="footer__nav">
+          <h4 class="footer__nav-title">Servicios</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#" class="footer__nav-link">Desarrollo Web</a></li>
+            <li><a href="#" class="footer__nav-link">Apps Móviles</a></li>
+            <li><a href="#" class="footer__nav-link">Software Empresarial</a></li>
+            <li><a href="#" class="footer__nav-link">Consultoría</a></li>
+          </ul>
+        </nav>
+
+        <!-- Nav: Company -->
+        <nav class="footer__nav">
+          <h4 class="footer__nav-title">Empresa</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#nosotros" class="footer__nav-link">Sobre Nosotros</a></li>
+            <li><a href="#proyectos" class="footer__nav-link">Proyectos</a></li>
+            <li><a href="#" class="footer__nav-link">Blog</a></li>
+            <li><a href="#" class="footer__nav-link">Carreras</a></li>
+          </ul>
+        </nav>
+
+        <!-- Nav: Contact -->
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">Contacto</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:info@code218.com">info@code218.lat</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <a href="tel:+593992641539">+593 99 264 1539</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2024 Code218. Todos los derechos reservados.
+        </p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Política de Privacidad</a>
+          <a href="#" class="footer__legal-link">Términos de Servicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       Scripts
+       ======================================== -->
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

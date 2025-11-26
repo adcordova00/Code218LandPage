@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Header Layout
+   ========================================================================== */
+
+.header {
+  position: relative;
+  z-index: var(--z-fixed);
+}
+
+/* Space for fixed navbar */
+.header + main {
+  padding-top: var(--header-height);
+}
+

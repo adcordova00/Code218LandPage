@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Code218 Landing Page - Main Stylesheet
+   Architecture: 7-1 Pattern (Adapted)
+   Methodology: BEM
+   ========================================================================== */
+
+/* ========================================
+   Base Styles
+   ======================================== */
+@import url('./base/_variables.css');
+@import url('./base/_reset.css');
+@import url('./base/_typography.css');
+
+/* ========================================
+   Layout Styles
+   ======================================== */
+@import url('./layout/_header.css');
+@import url('./layout/_footer.css');
+@import url('./layout/_sections.css');
+
+/* ========================================
+   Component Styles
+   ======================================== */
+@import url('./components/_navbar.css');
+@import url('./components/_buttons.css');
+@import url('./components/_cards.css');
+
+/* ========================================
+   Section Styles
+   ======================================== */
+@import url('./sections/_hero.css');
+@import url('./sections/_services.css');
+@import url('./sections/_about.css');
+@import url('./sections/_projects.css');
+@import url('./sections/_technologies.css');
+@import url('./sections/_testimonials.css');
+@import url('./sections/_cta.css');
+@import url('./sections/_contact.css');
+
+/* ========================================
+   Utilities & Animations
+   ======================================== */
+@import url('./utils/_animations.css');
+

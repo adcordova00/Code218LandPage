@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Typography Styles
+   Font imports and text utilities
+   ========================================================================== */
+
+/* ========================================
+   Google Fonts Import - Montserrat
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   Base Typography
+   ======================================== */
+body {
+  font-family: var(--font-body);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-relaxed);
+}
+
+/* ========================================
+   Paragraph Styles
+   ======================================== */
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-lead {
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.text-small {
+  font-size: var(--text-sm);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* ========================================
+   Link Styles
+   ======================================== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Animated underline effect */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-base);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   Heading Utilities
+   ======================================== */
+.heading-xl {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.heading-lg {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.heading-md {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+}
+
+.heading-sm {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-tight);
+}
+
+/* ========================================
+   Text Highlight - Yellow Marker Effect
+   ======================================== */
+.text-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.text-highlight::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  right: -4px;
+  height: 40%;
+  background-color: var(--color-secondary);
+  z-index: -1;
+  transform: skewX(-3deg);
+}
+
+/* Alternative: gradient highlight */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   Text Colors
+   ======================================== */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-dark {
+  color: var(--color-text);
+}
+
+/* ========================================
+   Text Alignment
+   ======================================== */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* ========================================
+   Font Weights
+   ======================================== */
+.font-regular { font-weight: var(--font-regular); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+/* ========================================
+   Section Titles Pattern
+   ======================================== */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.section-header__label {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.section-header__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.section-header__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section-header__title {
+    font-size: var(--text-5xl);
+  }
+}
+

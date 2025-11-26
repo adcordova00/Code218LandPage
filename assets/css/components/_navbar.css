@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Navbar Component
+   Following BEM methodology
+   ========================================================================== */
+
+/* ========================================
+   Main Navbar
+   ======================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--color-white);
+  z-index: var(--z-fixed);
+  transition: all var(--transition-base);
+}
+
+.navbar--scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ========================================
+   Logo
+   ======================================== */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-img {
+  height: 45px;
+  width: auto;
+}
+
+/* ========================================
+   Navigation Menu
+   ======================================== */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+}
+
+.navbar__item {
+  position: relative;
+}
+
+.navbar__link {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--space-4);
+  right: var(--space-4);
+  height: 3px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.navbar__link:hover {
+  color: var(--color-primary);
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+  transform: scaleX(1);
+}
+
+.navbar__link--active {
+  color: var(--color-primary);
+}
+
+/* ========================================
+   CTA Button in Navbar
+   ======================================== */
+.navbar__cta {
+  margin-left: var(--space-4);
+}
+
+/* ========================================
+   Mobile Toggle
+   ======================================== */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  z-index: var(--z-modal);
+}
+
+.navbar__toggle-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.navbar__toggle-line:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+/* Toggle active state */
+.navbar__toggle--active .navbar__toggle-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.navbar__toggle--active .navbar__toggle-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.navbar__toggle--active .navbar__toggle-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ========================================
+   Mobile Menu
+   ======================================== */
+@media (max-width: 1024px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: calc(var(--header-height) + var(--space-8)) var(--space-6) var(--space-8);
+    gap: var(--space-2);
+    box-shadow: var(--shadow-2xl);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+  }
+
+  .navbar__menu--open {
+    transform: translateX(0);
+  }
+
+  .navbar__link {
+    padding: var(--space-4);
+    font-size: var(--text-lg);
+    border-radius: var(--radius-lg);
+  }
+
+  .navbar__link:hover {
+    background-color: var(--color-bg);
+  }
+
+  .navbar__link::after {
+    display: none;
+  }
+
+  .navbar__cta {
+    margin-left: 0;
+    margin-top: var(--space-4);
+  }
+
+  .navbar__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Overlay */
+  .navbar__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    z-index: var(--z-modal-backdrop);
+  }
+
+  .navbar__overlay--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar__overlay {
+    display: none;
+  }
+}
+

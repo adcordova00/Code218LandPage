@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Technologies Section
+   Following BEM methodology
+   ========================================================================== */
+
+.technologies {
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+/* ========================================
+   Tech Grid
+   ======================================== */
+.technologies__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-6);
+}
+
+/* ========================================
+   Infinite Scroll Carousel (Alternative)
+   ======================================== */
+.technologies__carousel {
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-4) 0;
+}
+
+.technologies__carousel::before,
+.technologies__carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.technologies__carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), transparent);
+}
+
+.technologies__carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), transparent);
+}
+
+.technologies__track {
+  display: flex;
+  gap: var(--space-8);
+  animation: scroll-infinite 30s linear infinite;
+  width: max-content;
+}
+
+.technologies__track:hover {
+  animation-play-state: paused;
+}
+
+.technologies__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 80px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.technologies__item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.technologies__logo {
+  max-width: 80px;
+  max-height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all var(--transition-base);
+}
+
+.technologies__item:hover .technologies__logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ========================================
+   Animation
+   ======================================== */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 1024px) {
+  .technologies__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .technologies__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .technologies__carousel::before,
+  .technologies__carousel::after {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .technologies__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technologies__item {
+    min-width: 100px;
+    height: 60px;
+  }
+
+  .technologies__logo {
+    max-width: 60px;
+    max-height: 30px;
+  }
+}
+
