@@ -3,9 +3,7 @@
  * ========================================
  */
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize all modules
   initAOS();
   initNavbar();
   initSmoothScroll();
@@ -14,25 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
   initProjectFilters();
 });
 
-/**
- * Initialize AOS (Animate On Scroll)
- */
 function initAOS() {
   AOS.init({
     duration: 800,
     easing: 'ease-out',
     once: true,
     offset: 100,
-    disable: 'mobile' // Disable on mobile for better performance
+    disable: 'mobile'
   });
 }
 
-/**
- * Navbar Functionality
- * - Mobile menu toggle
- * - Scroll effect (add shadow on scroll)
- * - Active link highlighting
- */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
   const navbarToggle = document.getElementById('navbar-toggle');
@@ -40,7 +29,6 @@ function initNavbar() {
   const navbarOverlay = document.getElementById('navbar-overlay');
   const navLinks = document.querySelectorAll('.navbar__link');
 
-  // Mobile menu toggle
   if (navbarToggle && navbarMenu) {
     navbarToggle.addEventListener('click', toggleMobileMenu);
     
@@ -48,7 +36,6 @@ function initNavbar() {
       navbarOverlay.addEventListener('click', closeMobileMenu);
     }
 
-    // Close menu when clicking a link
     navLinks.forEach(link => {
       link.addEventListener('click', closeMobileMenu);
     });
@@ -72,7 +59,6 @@ function initNavbar() {
     document.body.style.overflow = '';
   }
 
-  // Scroll effect - add shadow when scrolled
   let lastScroll = 0;
   
   window.addEventListener('scroll', function() {
@@ -87,7 +73,6 @@ function initNavbar() {
     lastScroll = currentScroll;
   }, { passive: true });
 
-  // Active link highlighting based on scroll position
   const sections = document.querySelectorAll('section[id]');
   
   function updateActiveLink() {
@@ -111,9 +96,6 @@ function initNavbar() {
   window.addEventListener('scroll', debounce(updateActiveLink, 100), { passive: true });
 }
 
-/**
- * Smooth Scroll for anchor links
- */
 function initSmoothScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
   
@@ -140,9 +122,7 @@ function initSmoothScroll() {
   });
 }
 
-/**
- * Counter Animation for statistics
- */
+
 function initCounterAnimation() {
   const counters = document.querySelectorAll('[data-count]');
   
@@ -185,47 +165,47 @@ function initCounterAnimation() {
   }
 }
 
-/**
- * Contact Form Handling
- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   
   if (!form) return;
 
-  form.addEventListener('submit', async function(e) {
+  const WHATSAPP_NUMBER = '593992641539';
+
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerHTML;
+    const inputs = form.querySelectorAll('[required]');
+    let isValid = true;
     
-    // Show loading state
-    submitBtn.innerHTML = `
-      <span class="spinner spinner--sm"></span>
-      Enviando...
-    `;
-    submitBtn.disabled = true;
+    inputs.forEach(input => {
+      if (!input.checkValidity()) {
+        input.classList.add('form-input--error');
+        isValid = false;
+      } else {
+        input.classList.remove('form-input--error');
+      }
+    });
 
-    // Collect form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    // Simulate form submission (replace with actual API call)
-    try {
-      await simulateFormSubmission(data);
-      
-      // Show success message
-      showNotification('¡Mensaje enviado con éxito! Te contactaremos pronto.', 'success');
-      form.reset();
-    } catch (error) {
-      showNotification('Hubo un error al enviar el mensaje. Por favor intenta de nuevo.', 'error');
-    } finally {
-      submitBtn.innerHTML = originalBtnText;
-      submitBtn.disabled = false;
+    if (!isValid) {
+      showNotification('Por favor, completa todos los campos requeridos.', 'error');
+      return;
     }
+
+    const name = form.querySelector('#name').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    const subject = form.querySelector('#subject').value.trim() || 'Sin asunto';
+    const message = form.querySelector('#message').value.trim();
+
+    const whatsappMessage = buildWhatsAppMessage(name, email, subject, message);
+    
+    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    window.open(whatsappURL, '_blank');
+    
+    showNotification('¡Redirigiendo a WhatsApp! Envía el mensaje para contactarnos.', 'success');
   });
 
-  // Form validation feedback
   const inputs = form.querySelectorAll('.form-input, .form-textarea');
   
   inputs.forEach(input => {
@@ -253,21 +233,25 @@ function initContactForm() {
   }
 }
 
-/**
- * Simulate form submission (replace with actual API)
- */
-function simulateFormSubmission(data) {
-  return new Promise((resolve) => {
-    console.log('Form data:', data);
-    setTimeout(resolve, 1500);
-  });
+function buildWhatsAppMessage(name, email, subject, message) {
+  return `🚀 *Nueva Consulta desde Code218.org*
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+👤 *Nombre:* ${name}
+📧 *Email:* ${email}
+📋 *Asunto:* ${subject}
+
+💬 *Mensaje:*
+${message}
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+_Enviado desde el formulario web_`;
 }
 
-/**
- * Show notification message
- */
+
 function showNotification(message, type = 'info') {
-  // Remove existing notifications
   const existingNotification = document.querySelector('.notification');
   if (existingNotification) {
     existingNotification.remove();
@@ -280,7 +264,6 @@ function showNotification(message, type = 'info') {
     <button class="notification__close" aria-label="Cerrar">&times;</button>
   `;
 
-  // Add styles dynamically
   notification.style.cssText = `
     position: fixed;
     bottom: 24px;
@@ -299,12 +282,10 @@ function showNotification(message, type = 'info') {
 
   document.body.appendChild(notification);
 
-  // Close button functionality
   notification.querySelector('.notification__close').addEventListener('click', () => {
     notification.remove();
   });
 
-  // Auto remove after 5 seconds
   setTimeout(() => {
     if (notification.parentNode) {
       notification.style.animation = 'slideOut 0.3s ease forwards';
@@ -313,9 +294,6 @@ function showNotification(message, type = 'info') {
   }, 5000);
 }
 
-/**
- * Project Filters
- */
 function initProjectFilters() {
   const filterButtons = document.querySelectorAll('.projects__filter');
   const projectCards = document.querySelectorAll('.project-card');
@@ -326,11 +304,9 @@ function initProjectFilters() {
     button.addEventListener('click', function() {
       const filter = this.getAttribute('data-filter');
 
-      // Update active button
       filterButtons.forEach(btn => btn.classList.remove('projects__filter--active'));
       this.classList.add('projects__filter--active');
 
-      // Filter projects
       projectCards.forEach(card => {
         const category = card.getAttribute('data-category');
         
@@ -345,9 +321,6 @@ function initProjectFilters() {
   });
 }
 
-/**
- * Utility: Debounce function
- */
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -360,9 +333,6 @@ function debounce(func, wait) {
   };
 }
 
-/**
- * Add CSS animations dynamically
- */
 (function addDynamicStyles() {
   const style = document.createElement('style');
   style.textContent = `
