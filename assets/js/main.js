@@ -194,10 +194,12 @@ function initContactForm() {
 
     const name = form.querySelector('#name').value.trim();
     const email = form.querySelector('#email').value.trim();
+    const interest = form.querySelector('#interes');
+    const interestLabel = interest ? interest.options[interest.selectedIndex].text : 'Sin especificar';
     const subject = form.querySelector('#subject').value.trim() || 'Sin asunto';
     const message = form.querySelector('#message').value.trim();
 
-    const whatsappMessage = buildWhatsAppMessage(name, email, subject, message);
+    const whatsappMessage = buildWhatsAppMessage(name, email, interestLabel, subject, message);
     
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
     
@@ -233,13 +235,14 @@ function initContactForm() {
   }
 }
 
-function buildWhatsAppMessage(name, email, subject, message) {
+function buildWhatsAppMessage(name, email, interest, subject, message) {
   return `🚀 *Nueva Consulta desde Code218.org*
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
 👤 *Nombre:* ${name}
 📧 *Email:* ${email}
+🎯 *Interés:* ${interest}
 📋 *Asunto:* ${subject}
 
 💬 *Mensaje:*
