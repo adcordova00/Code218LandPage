@@ -3,37 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
-  <title>Code218 | Desarrollo de Software a Medida en Ecuador</title>
-  <meta name="description" content="Code218 - Empresa de desarrollo de software en Loja, Ecuador. Creamos aplicaciones web, móviles y soluciones digitales a medida. ¡Transforma tu negocio hoy!">
-  <meta name="keywords" content="desarrollo web Ecuador, software a medida Loja, aplicaciones móviles, Code218, programación, desarrollo de software, páginas web, apps Ecuador">
+  <title>Code218 | API de Facturación Electrónica SRI y Software a Medida</title>
+  <meta name="description" content="Integra la facturación electrónica del SRI en tu sistema con una API. Vende por WhatsApp con MicroMarket. Software empresarial a medida desde Loja, Ecuador.">
+  <meta name="keywords" content="facturación electrónica SRI, API facturación Ecuador, integrar SRI, comprobantes electrónicos, bot WhatsApp ventas, software a medida Loja, Code218, desarrollo de software Ecuador">
   <meta name="author" content="Code218">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://code218.org/">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://code218.org/">
-  <meta property="og:title" content="Code218 | Desarrollo de Software a Medida en Ecuador">
-  <meta property="og:description" content="Creamos aplicaciones web, móviles y soluciones digitales a medida. Tu socio tecnológico de confianza en Ecuador.">
+  <meta property="og:title" content="Code218 | API de Facturación Electrónica SRI y Software a Medida">
+  <meta property="og:description" content="Integra la facturación electrónica del SRI en tu sistema con una API. Vende por WhatsApp con MicroMarket. Software empresarial a medida en Ecuador.">
   <meta property="og:image" content="https://code218.org/assets/images/CODE218.png">
   <meta property="og:locale" content="es_EC">
   <meta property="og:site_name" content="Code218">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://code218.org/">
-  <meta name="twitter:title" content="Code218 | Desarrollo de Software a Medida">
-  <meta name="twitter:description" content="Creamos aplicaciones web, móviles y soluciones digitales a medida.">
+  <meta name="twitter:title" content="Code218 | API de Facturación Electrónica SRI">
+  <meta name="twitter:description" content="Integra la facturación electrónica del SRI en tu sistema con una API. Vende por WhatsApp con MicroMarket.">
   <meta name="twitter:image" content="https://code218.org/assets/images/CODE218.png">
-  
+
   <!-- Geo Tags -->
   <meta name="geo.region" content="EC-L">
   <meta name="geo.placename" content="Loja, Ecuador">
-  
+
   <link rel="icon" type="image/png" href="assets/images/CODE218.ico">
-  
+
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -42,7 +42,7 @@
     "name": "Code218",
     "url": "https://code218.org",
     "logo": "https://code218.org/assets/images/CODE218.png",
-    "description": "Empresa de desarrollo de software a medida en Ecuador. Creamos aplicaciones web, móviles y soluciones digitales.",
+    "description": "Empresa ecuatoriana de software. Facturación electrónica del SRI por API, automatización de ventas por WhatsApp y desarrollo de sistemas a medida.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Loja",
@@ -51,7 +51,9 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+593-99-264-1539",
-      "contactType": "customer service",
+      "email": "info@code218.org",
+      "contactType": "sales",
+      "areaServed": "EC",
       "availableLanguage": "Spanish"
     },
     "sameAs": [
@@ -61,6 +63,25 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "API de Facturación Electrónica SRI",
+    "serviceType": "Facturación electrónica",
+    "provider": {
+      "@type": "Organization",
+      "name": "Code218",
+      "url": "https://code218.org"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Ecuador"
+    },
+    "description": "API REST para emitir facturas, notas de crédito y demás comprobantes electrónicos autorizados por el SRI: firma electrónica, envío, autorización, RIDE y webhooks de estado.",
+    "url": "https://code218.org/#facturacion"
+  }
+  </script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -68,27 +89,27 @@
   <header class="header">
     <nav class="navbar" id="navbar">
       <div class="navbar__container">
-        <a href="#" class="navbar__logo">
+        <a href="#inicio" class="navbar__logo">
           <img src="assets/images/CODE218.png" alt="Code218 Logo" class="navbar__logo-img">
         </a>
         <ul class="navbar__menu" id="navbar-menu">
           <li class="navbar__item">
-            <a href="#inicio" class="navbar__link navbar__link--active">Inicio</a>
+            <a href="#soluciones" class="navbar__link navbar__link--active">Soluciones</a>
           </li>
           <li class="navbar__item">
-            <a href="#servicios" class="navbar__link">Servicios</a>
+            <a href="#facturacion" class="navbar__link">Facturación SRI</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#micromarket" class="navbar__link">MicroMarket</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#fabrica" class="navbar__link">A medida</a>
           </li>
           <li class="navbar__item">
             <a href="#nosotros" class="navbar__link">Nosotros</a>
           </li>
-          <li class="navbar__item">
-            <a href="#proyectos" class="navbar__link">Proyectos</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#testimonios" class="navbar__link">Testimonios</a>
-          </li>
           <li class="navbar__item navbar__cta">
-            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="btn btn--primary">Contáctanos</a>
+            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn--primary">Contáctanos</a>
           </li>
         </ul>
         <button class="navbar__toggle" id="navbar-toggle" aria-label="Menú">
@@ -109,37 +130,38 @@
         <div class="hero__content" data-aos="fade-right" data-aos-duration="800">
           <span class="hero__badge">
             <span class="hero__badge-dot"></span>
-            Innovación Digital
+            Facturación electrónica SRI en producción
           </span>
           <h1 class="hero__title">
-            Transformamos ideas en
-            <span class="hero__title-highlight">soluciones digitales</span>
+            Software ecuatoriano que
+            <span class="hero__title-highlight">factura solo</span>
           </h1>
           <p class="hero__description">
-            Somos expertos en desarrollo de software a medida. Creamos aplicaciones web, 
-            móviles y sistemas empresariales que impulsan el crecimiento de tu negocio.
+            Resolvimos la parte más dolorosa de vender en Ecuador: emitir comprobantes válidos
+            ante el SRI, sin intervención humana. Ahora la ponemos donde la necesites — en tu
+            sistema, en tu WhatsApp o en el software que construimos para ti.
           </p>
           <div class="hero__buttons">
-            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20iniciar%20un%20proyecto" target="_blank" class="btn btn--primary btn--lg">
-              Iniciar Proyecto
+            <a href="#soluciones" class="btn btn--primary btn--lg">
+              Ver las tres soluciones
               <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="#proyectos" class="btn btn--secondary btn--lg">Ver Proyectos</a>
+            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noopener" class="btn btn--secondary btn--lg">Hablar por WhatsApp</a>
           </div>
           <div class="hero__stats">
             <div class="hero__stat">
-              <span class="hero__stat-number" data-count="150">0</span>
-              <span class="hero__stat-label">Proyectos Completados</span>
+              <span class="hero__stat-number">SRI</span>
+              <span class="hero__stat-label">Comprobantes autorizados automáticamente</span>
             </div>
             <div class="hero__stat">
-              <span class="hero__stat-number" data-count="50">0</span>
-              <span class="hero__stat-label">Clientes Satisfechos</span>
+              <span class="hero__stat-number">Meta</span>
+              <span class="hero__stat-label">API oficial de WhatsApp Business</span>
             </div>
             <div class="hero__stat">
-              <span class="hero__stat-number" data-count="5">0</span>
-              <span class="hero__stat-label">Años de Experiencia</span>
+              <span class="hero__stat-number">Loja</span>
+              <span class="hero__stat-label">Desarrollo propio en Ecuador</span>
             </div>
           </div>
         </div>
@@ -149,31 +171,467 @@
             <div class="hero__shape hero__shape--2"></div>
             <div class="hero__shape hero__shape--3"></div>
             <div class="hero__image" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0570e3 100%); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <polyline points="9 14 11 16 15 12"/>
               </svg>
             </div>
             <div class="hero__code-float hero__code-float--1">
-              <code>&lt;Code218 /&gt;</code>
+              <code>POST /facturas</code>
             </div>
             <div class="hero__code-float hero__code-float--2">
-              <code>{ success: true }</code>
+              <code>{ "estado": "AUTORIZADA" }</code>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="services section" id="servicios">
+    <section class="solutions section" id="soluciones">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-header__label">Nuestros Servicios</span>
-          <h2 class="section-header__title">Soluciones a tu medida</h2>
+          <span class="section-header__label">Soluciones</span>
+          <h2 class="section-header__title">Tres formas de trabajar con nosotros</h2>
           <p class="section-header__subtitle">
-            Ofrecemos servicios integrales de desarrollo para llevar tu negocio al siguiente nivel.
+            Según dónde estés hoy: tienes un sistema y te falta facturar, vendes por WhatsApp
+            y quieres automatizarlo, o necesitas un software que todavía no existe.
+          </p>
+        </div>
+        <div class="solutions__grid">
+
+          <article class="solution-card solution-card--featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="solution-card__header">
+              <div class="solution-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <div>
+                <span class="solution-card__eyebrow">Para software, SaaS y agencias</span>
+                <h3 class="solution-card__title">API de Facturación Electrónica SRI</h3>
+              </div>
+            </div>
+            <p class="solution-card__description">
+              Tu sistema ya vende. Nosotros nos encargamos de que emita comprobantes válidos:
+              firma electrónica, envío al SRI, autorización, RIDE y notas de crédito — todo por API.
+            </p>
+            <ul class="solution-card__list">
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Un RUC por emisor, varios puntos de emisión
+              </li>
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Solo pagas los comprobantes autorizados
+              </li>
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                El XML y el RIDE siempre son tuyos
+              </li>
+            </ul>
+            <div class="solution-card__footer">
+              <span class="solution-card__price">Desde <strong>$0.010</strong> por comprobante</span>
+              <a href="#facturacion" class="btn btn--primary btn--full">
+                Ver la API
+                <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://facturacion.code218.org" target="_blank" rel="noopener" class="solution-card__link">Leer la documentación técnica</a>
+            </div>
+          </article>
+
+          <article class="solution-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="solution-card__header">
+              <div class="solution-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="solution-card__eyebrow">Para restaurantes y comercios</span>
+                <h3 class="solution-card__title">MicroMarket</h3>
+              </div>
+            </div>
+            <p class="solution-card__description">
+              Un bot que atiende tu WhatsApp las 24 horas: muestra el catálogo, arma el pedido,
+              cobra, factura y coordina la entrega. Tú solo ves el pedido ya listo en un panel.
+            </p>
+            <ul class="solution-card__list">
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Catálogo, carrito y cobro automáticos
+              </li>
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Factura electrónica del SRI incluida
+              </li>
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Línea oficial de Meta, sin riesgo de baneo
+              </li>
+            </ul>
+            <div class="solution-card__footer">
+              <span class="solution-card__price">Desde <strong>$39</strong> al mes, sin contrato</span>
+              <a href="#micromarket" class="btn btn--secondary btn--full">
+                Ver MicroMarket
+                <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="solution-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="solution-card__header">
+              <div class="solution-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div>
+                <span class="solution-card__eyebrow">Para empresas con un problema propio</span>
+                <h3 class="solution-card__title">Software a medida</h3>
+              </div>
+            </div>
+            <p class="solution-card__description">
+              Cuando no hay producto en el mercado que te sirva. Levantamos los requerimientos,
+              diseñamos la arquitectura y construimos el sistema — con la facturación ya resuelta
+              desde el primer día.
+            </p>
+            <ul class="solution-card__list">
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Requerimientos y arquitectura documentados
+              </li>
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Entregas por fases, con prototipos antes de programar
+              </li>
+              <li class="solution-card__list-item">
+                <svg class="solution-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                Licencia de uso o código completo — tú eliges
+              </li>
+            </ul>
+            <div class="solution-card__footer">
+              <span class="solution-card__price">Precio atado al <strong>alcance</strong>, no al tiempo</span>
+              <a href="#fabrica" class="btn btn--secondary btn--full">
+                Cómo trabajamos
+                <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="product product--dark section" id="facturacion">
+      <div class="container">
+        <div class="product__header" data-aos="fade-up">
+          <span class="product__label">Producto · API</span>
+          <h2 class="product__title">Facturación electrónica del SRI, por API</h2>
+          <p class="product__subtitle">
+            Construirla desde cero toma meses: XML, firma con certificado, el ciclo de recepción
+            y autorización, la contingencia cuando el SRI no responde. Nosotros ya la tenemos
+            funcionando en producción. Tú solo llamas a un endpoint.
+          </p>
+        </div>
+
+        <div class="product__grid">
+          <div class="product__panel" data-aos="fade-right">
+            <h3 class="product__panel-title">Para quién es</h3>
+            <ul class="product__list">
+              <li class="product__list-item">
+                <svg class="product__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                <span><strong>SaaS y sistemas POS</strong> que facturan en nombre de sus clientes</span>
+              </li>
+              <li class="product__list-item">
+                <svg class="product__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                <span><strong>Agencias de desarrollo</strong> que no quieren construir facturación para cada cliente</span>
+              </li>
+              <li class="product__list-item">
+                <svg class="product__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                <span><strong>ERPs y sistemas internos</strong> que ya operan y necesitan emitir comprobantes</span>
+              </li>
+              <li class="product__list-item">
+                <svg class="product__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                <span><strong>E-commerce y marketplaces</strong> con varios emisores en una sola plataforma</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="product__panel" data-aos="fade-left">
+            <h3 class="product__panel-title">Cómo funciona</h3>
+            <ol class="product__steps">
+              <li class="product__step">
+                <span class="product__step-number">1</span>
+                <div>
+                  <h4 class="product__step-title">Registras el emisor</h4>
+                  <p class="product__step-text">
+                    Un negocio = un RUC = un certificado de firma. Cargas el <code class="product__step-code">.p12</code>
+                    y defines sus puntos de emisión, cada uno con su numeración — incluido el secuencial
+                    desde el que ya venía facturando.
+                  </p>
+                </div>
+              </li>
+              <li class="product__step">
+                <span class="product__step-number">2</span>
+                <div>
+                  <h4 class="product__step-title">Llamas al endpoint</h4>
+                  <p class="product__step-text">
+                    Envías el comprobante con el id de tu pedido como clave de idempotencia. Si reintentas,
+                    no se duplica. Nosotros firmamos, enviamos al SRI y gestionamos los reintentos.
+                  </p>
+                </div>
+              </li>
+              <li class="product__step">
+                <span class="product__step-number">3</span>
+                <div>
+                  <h4 class="product__step-title">Recibes la autorización</h4>
+                  <p class="product__step-text">
+                    Te devolvemos el comprobante con su número de autorización, el XML y el RIDE en PDF,
+                    y un webhook te avisa de cualquier cambio de estado. Primero pruebas contra la
+                    certificación del SRI, después pasas a producción.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="product__pricing" data-aos="fade-up">
+          <h3 class="product__pricing-title">Precio por comprobante, según tu volumen mensual</h3>
+          <div class="product__tiers">
+            <div class="product__tier">
+              <span class="product__tier-price">$0.040</span>
+              <span class="product__tier-unit">por comprobante</span>
+              <span class="product__tier-range">Hasta 500 al mes</span>
+            </div>
+            <div class="product__tier">
+              <span class="product__tier-price">$0.025</span>
+              <span class="product__tier-unit">por comprobante</span>
+              <span class="product__tier-range">De 501 a 3.000</span>
+            </div>
+            <div class="product__tier">
+              <span class="product__tier-price">$0.015</span>
+              <span class="product__tier-unit">por comprobante</span>
+              <span class="product__tier-range">De 3.001 a 20.000</span>
+            </div>
+            <div class="product__tier">
+              <span class="product__tier-price">$0.010</span>
+              <span class="product__tier-unit">por comprobante</span>
+              <span class="product__tier-range">Más de 20.000</span>
+            </div>
+          </div>
+          <p class="product__note">
+            El precio del tramo aplica a todos los comprobantes del mes. Solo se cobran los
+            <strong>autorizados por el SRI</strong>: los rechazados, los reintentos y la idempotencia
+            repetida no cuentan. Las notas de crédito valen igual que una factura. Aplica un mínimo
+            mensual de $50; se paga el mayor entre consumo y mínimo, nunca la suma.
+          </p>
+        </div>
+
+        <div class="product__cta" data-aos="fade-up">
+          <a href="https://facturacion.code218.org" target="_blank" rel="noopener" class="btn btn--accent btn--lg">
+            Ver la documentación
+            <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20acceso%20al%20ambiente%20de%20pruebas%20de%20la%20API%20de%20facturaci%C3%B3n" target="_blank" rel="noopener" class="btn btn--white btn--lg">
+            Solicitar acceso de pruebas
+          </a>
+        </div>
+        <p class="product__note" data-aos="fade-up">
+          Directo a lo que busques:
+          <a href="https://facturacion.code218.org/guia" target="_blank" rel="noopener">guía de integración</a> ·
+          <a href="https://facturacion.code218.org/api" target="_blank" rel="noopener">referencia de endpoints</a> ·
+          <a href="https://facturacion.code218.org/errores" target="_blank" rel="noopener">catálogo de errores</a> ·
+          <a href="https://facturacion.code218.org/openapi.json" target="_blank" rel="noopener">openapi.json</a>.
+          ¿Dudas antes de integrar? Escríbenos a
+          <a href="mailto:info@code218.org?subject=Integraci%C3%B3n%20API%20de%20Facturaci%C3%B3n%20SRI">info@code218.org</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="product product--alt section" id="micromarket">
+      <div class="container">
+        <div class="product__header" data-aos="fade-up">
+          <span class="product__label">Producto · WhatsApp</span>
+          <h2 class="product__title">MicroMarket: tu WhatsApp vendiendo solo</h2>
+          <p class="product__subtitle">
+            Si vendes por WhatsApp, hoy respondes precios uno por uno, armas el pedido a mano,
+            pides el comprobante de pago, revisas si el depósito llegó y encima tienes que acordarte
+            de facturar. MicroMarket hace todo eso por ti.
+          </p>
+        </div>
+
+        <div class="product__grid">
+          <div class="product__panel" data-aos="fade-right">
+            <h3 class="product__panel-title">Qué pasa cuando te escriben</h3>
+            <ol class="product__steps">
+              <li class="product__step">
+                <span class="product__step-number">1</span>
+                <div>
+                  <h4 class="product__step-title">Tu cliente escribe a cualquier hora</h4>
+                  <p class="product__step-text">Al WhatsApp de tu negocio, como siempre. No instala ni se registra en nada.</p>
+                </div>
+              </li>
+              <li class="product__step">
+                <span class="product__step-number">2</span>
+                <div>
+                  <h4 class="product__step-title">El bot muestra el catálogo y arma el carrito</h4>
+                  <p class="product__step-text">Con botones y listas, guiándolo producto por producto hasta cerrar el pedido.</p>
+                </div>
+              </li>
+              <li class="product__step">
+                <span class="product__step-number">3</span>
+                <div>
+                  <h4 class="product__step-title">Paga como prefiera</h4>
+                  <p class="product__step-text">Efectivo, transferencia o tarjeta. Si manda comprobante, la IA revisa fecha, cuenta y monto al instante.</p>
+                </div>
+              </li>
+              <li class="product__step">
+                <span class="product__step-number">4</span>
+                <div>
+                  <h4 class="product__step-title">Recibe su factura electrónica</h4>
+                  <p class="product__step-text">Generada y autorizada ante el SRI sola, apenas se confirma el pago. Tú no tocas nada.</p>
+                </div>
+              </li>
+              <li class="product__step">
+                <span class="product__step-number">5</span>
+                <div>
+                  <h4 class="product__step-title">Se coordina la entrega</h4>
+                  <p class="product__step-text">El bot le ofrece el pedido a tu repartidor, y él mismo confirma cuando entrega y cobra.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div data-aos="fade-left">
+            <div class="product__plans">
+              <div class="product__plan">
+                <h3 class="product__plan-name">Plan Simple</h3>
+                <div class="product__plan-price">
+                  <span class="product__plan-amount">$39</span>
+                  <span class="product__plan-period">/ mes</span>
+                </div>
+                <ul class="product__plan-list">
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Catálogo y carrito por WhatsApp
+                  </li>
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Cobro en efectivo, transferencia o tarjeta
+                  </li>
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Panel de administración de pedidos
+                  </li>
+                </ul>
+                <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20me%20interesa%20el%20Plan%20Simple%20de%20MicroMarket" target="_blank" rel="noopener" class="btn btn--secondary btn--full">Quiero este plan</a>
+              </div>
+
+              <div class="product__plan product__plan--featured">
+                <h3 class="product__plan-name">Plan Ultra</h3>
+                <div class="product__plan-price">
+                  <span class="product__plan-amount">$79</span>
+                  <span class="product__plan-period">/ mes</span>
+                </div>
+                <ul class="product__plan-list">
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Todo lo del Plan Simple
+                  </li>
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Factura electrónica del SRI automática
+                  </li>
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Delivery coordinado por el propio bot
+                  </li>
+                  <li class="product__plan-item">
+                    <svg class="product__plan-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+                    Soporte prioritario
+                  </li>
+                </ul>
+                <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20me%20interesa%20el%20Plan%20Ultra%20de%20MicroMarket" target="_blank" rel="noopener" class="btn btn--primary btn--full">Quiero este plan</a>
+              </div>
+            </div>
+            <p class="product__note">
+              Sin contrato, cancelas cuando quieras. La configuración la hacemos nosotros: tú solo
+              pasas tus productos con precio y tus datos tributarios. Nos conectamos a la API oficial
+              de WhatsApp Business de Meta, con tu propia línea registrada a tu nombre.
+            </p>
+          </div>
+        </div>
+
+        <div class="product__cta" data-aos="fade-up">
+          <a href="https://micromarket.tech" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+            Ir a micromarket.tech
+            <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20una%20demo%20de%20MicroMarket" target="_blank" rel="noopener" class="btn btn--secondary btn--lg">
+            Agendar una demo de 15 min
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="fabrica">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-header__label">Fábrica de software</span>
+          <h2 class="section-header__title">Cuando no hay producto que te sirva</h2>
+          <p class="section-header__subtitle">
+            Construimos sistemas a medida para empresas con un proceso propio que ningún software
+            del mercado resuelve. Estas son las piezas con las que trabajamos.
           </p>
         </div>
         <div class="services__grid">
+          <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Sistemas empresariales</h3>
+            <p class="service-card__description">
+              Operaciones, inventario, cajas, cupos y cuadres. Lógica de negocio real, con las reglas
+              de concurrencia y consistencia que tu operación necesita.
+            </p>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">APIs e integraciones</h3>
+            <p class="service-card__description">
+              Conectamos tu sistema con lo que ya usas: SRI, pasarelas de pago, WhatsApp, ERPs
+              y servicios de terceros. Contratos documentados y versionados.
+            </p>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <polyline points="9 14 11 16 15 12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Facturación en tu sistema</h3>
+            <p class="service-card__description">
+              Si ya tienes software funcionando y solo te falta emitir comprobantes, integramos
+              nuestra facturación electrónica dentro de él sin reescribirlo.
+            </p>
+          </article>
           <article class="service-card" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -182,66 +640,22 @@
                 <line x1="12" y1="17" x2="12" y2="21"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Desarrollo Web</h3>
+            <h3 class="service-card__title">Aplicaciones web y PWA</h3>
             <p class="service-card__description">
-              Creamos sitios web y aplicaciones web modernas, responsivas y optimizadas para SEO 
-              que cautivan a tus usuarios.
+              Paneles de administración, portales de cliente y aplicaciones instalables que funcionan
+              igual en escritorio y en el celular.
             </p>
           </article>
           <article class="service-card" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Apps Móviles</h3>
+            <h3 class="service-card__title">Automatización con WhatsApp</h3>
             <p class="service-card__description">
-              Desarrollamos aplicaciones nativas e híbridas para iOS y Android que ofrecen 
-              experiencias excepcionales.
-            </p>
-          </article>
-          <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">Software Empresarial</h3>
-            <p class="service-card__description">
-              Sistemas ERP, CRM y soluciones personalizadas que automatizan y optimizan 
-              los procesos de tu empresa.
-            </p>
-          </article>
-          <article class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                <line x1="12" y1="22.08" x2="12" y2="12"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">APIs & Backend</h3>
-            <p class="service-card__description">
-              Arquitecturas robustas y escalables con APIs REST y GraphQL que potencian 
-              tus aplicaciones.
-            </p>
-          </article>
-          <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-                <path d="M16 3.13a4 4 0 010 7.75"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">Consultoría Tech</h3>
-            <p class="service-card__description">
-              Te asesoramos en la elección de tecnologías y arquitecturas para maximizar 
-              el éxito de tu proyecto.
+              Flujos conversacionales sobre la API oficial de Meta: atención, pedidos, recordatorios
+              y notificaciones, conectados a tu sistema.
             </p>
           </article>
           <article class="service-card" data-aos="fade-up" data-aos-delay="300">
@@ -251,10 +665,10 @@
                 <polyline points="8,6 2,12 8,18"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Mantenimiento</h3>
+            <h3 class="service-card__title">Soporte y evolución</h3>
             <p class="service-card__description">
-              Soporte continuo, actualizaciones y mejoras para mantener tu software 
-              funcionando al máximo rendimiento.
+              Mantenimiento, monitoreo y mejoras continuas. El software no se entrega y se abandona:
+              se opera.
             </p>
           </article>
         </div>
@@ -266,25 +680,22 @@
         <div class="about__container">
           <div class="about__image-wrapper" data-aos="fade-right">
             <div class="about__image" style="background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-2xl);">
-              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
+              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true">
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
                 <path d="M23 21v-2a4 4 0 00-3-3.87"/>
                 <path d="M16 3.13a4 4 0 010 7.75"/>
               </svg>
             </div>
-            <div class="about__experience-badge">
-              <span class="about__experience-number">5+</span>
-              <span class="about__experience-text">Años de Experiencia</span>
-            </div>
           </div>
           <div class="about__content" data-aos="fade-left">
-            <span class="about__label">Sobre Nosotros</span>
-            <h2 class="about__title">Un equipo apasionado por la tecnología</h2>
+            <span class="about__label">Cómo trabajamos</span>
+            <h2 class="about__title">Ingeniería documentada, no promesas</h2>
             <p class="about__description">
-              En Code218, combinamos creatividad técnica con un profundo entendimiento de las 
-              necesidades empresariales. Nuestro equipo de desarrolladores expertos trabaja 
-              incansablemente para entregar soluciones que superan expectativas.
+              Code218 es una empresa de software ecuatoriana con base en Loja. Construimos productos
+              propios y sistemas a medida, y los operamos: lo que entregamos es software que ya está
+              corriendo, no una demo. Trabajamos con decisiones escritas, para que puedas revisar el
+              porqué de cada una.
             </p>
             <ul class="about__features">
               <li class="about__feature">
@@ -293,7 +704,7 @@
                     <polyline points="20,6 9,17 4,12"/>
                   </svg>
                 </span>
-                Metodologías ágiles para entregas rápidas
+                Requerimientos y arquitectura escritos antes de programar
               </li>
               <li class="about__feature">
                 <span class="about__feature-icon">
@@ -301,7 +712,7 @@
                     <polyline points="20,6 9,17 4,12"/>
                   </svg>
                 </span>
-                Código limpio y documentación completa
+                Prototipos visuales de cada pantalla antes de desarrollar
               </li>
               <li class="about__feature">
                 <span class="about__feature-icon">
@@ -309,7 +720,7 @@
                     <polyline points="20,6 9,17 4,12"/>
                   </svg>
                 </span>
-                Comunicación constante durante el proyecto
+                Precio atado al alcance: si nos demoramos nosotros, no te cuesta más
               </li>
               <li class="about__feature">
                 <span class="about__feature-icon">
@@ -317,74 +728,57 @@
                     <polyline points="20,6 9,17 4,12"/>
                   </svg>
                 </span>
-                Soporte post-lanzamiento garantizado
+                Eliges licencia de uso o código completo — tú decides de quién es
               </li>
             </ul>
-            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20ustedes" target="_blank" class="btn btn--primary">Conoce más</a>
+            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20ustedes" target="_blank" rel="noopener" class="btn btn--primary">Conversemos</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="projects section" id="proyectos">
+    <section class="projects section" id="casos">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-header__label">Nuestro Trabajo</span>
-          <h2 class="section-header__title">Proyectos Destacados</h2>
+          <span class="section-header__label">Nuestro trabajo</span>
+          <h2 class="section-header__title">En qué estamos trabajando</h2>
           <p class="section-header__subtitle">
-            Descubre algunos de los proyectos que hemos desarrollado para nuestros clientes.
+            Proyectos reales en desarrollo y en producción. Los nombres de los clientes se comparten
+            en reunión, no en la web.
           </p>
         </div>
-        <div class="projects__filters" data-aos="fade-up" data-aos-delay="100">
-          <button class="projects__filter projects__filter--active" data-filter="all">Todos</button>
-          <button class="projects__filter" data-filter="web">Web</button>
-          <button class="projects__filter" data-filter="mobile">Móvil</button>
-          <button class="projects__filter" data-filter="enterprise">Empresarial</button>
-        </div>
         <div class="projects__grid">
-          <article class="project-card projects__item--featured" data-aos="fade-up" data-category="web">
+          <article class="project-card projects__item--featured" data-aos="fade-up" data-category="enterprise">
             <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0570e3 100%); width: 100%; height: 100%;"></div>
             <div class="project-card__overlay">
-              <span class="project-card__category">Aplicación Web</span>
-              <h3 class="project-card__title">E-Commerce Platform</h3>
-              <p class="project-card__description">Plataforma de comercio electrónico completa con pasarela de pagos integrada.</p>
+              <span class="project-card__category">Software a medida</span>
+              <h3 class="project-card__title">Corresponsalía financiera</h3>
+              <p class="project-card__description">
+                Sistema de cajas con cupo compartido en tiempo real, cuadre diario y trazabilidad
+                de cada transacción. El reto real: concurrencia sobre un saldo común.
+              </p>
             </div>
           </article>
-          <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="mobile">
-            <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-secondary) 0%, #e6cf00 100%); width: 100%; height: 100%;"></div>
-            <div class="project-card__overlay">
-              <span class="project-card__category">App Móvil</span>
-              <h3 class="project-card__title">Delivery App</h3>
-              <p class="project-card__description">Aplicación de delivery con seguimiento en tiempo real.</p>
-            </div>
-          </article>
-          <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="enterprise">
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="api">
             <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-accent) 0%, #c9211a 100%); width: 100%; height: 100%;"></div>
             <div class="project-card__overlay">
-              <span class="project-card__category">Software Empresarial</span>
-              <h3 class="project-card__title">Sistema ERP</h3>
-              <p class="project-card__description">Sistema de gestión empresarial integral.</p>
+              <span class="project-card__category">API de facturación</span>
+              <h3 class="project-card__title">Facturación para un SaaS de restaurantes</h3>
+              <p class="project-card__description">
+                Emisores con varios puntos de emisión, idempotencia por pedido y webhooks de estado.
+              </p>
             </div>
           </article>
-          <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="web">
-            <div class="project-card__image" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); width: 100%; height: 100%;"></div>
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="web">
+            <div class="project-card__image" style="background: linear-gradient(135deg, var(--color-secondary) 0%, #e6cf00 100%); width: 100%; height: 100%;"></div>
             <div class="project-card__overlay">
-              <span class="project-card__category">Aplicación Web</span>
-              <h3 class="project-card__title">Dashboard Analytics</h3>
-              <p class="project-card__description">Panel de control con visualización de datos en tiempo real.</p>
+              <span class="project-card__category">Producto propio</span>
+              <h3 class="project-card__title">MicroMarket</h3>
+              <p class="project-card__description">
+                Bot de ventas por WhatsApp con catálogo, cobro, facturación y delivery.
+              </p>
             </div>
           </article>
-          <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="mobile">
-            <div class="project-card__image" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); width: 100%; height: 100%;"></div>
-            <div class="project-card__overlay">
-              <span class="project-card__category">App Móvil</span>
-              <h3 class="project-card__title">Fitness Tracker</h3>
-              <p class="project-card__description">Aplicación de seguimiento de actividad física.</p>
-            </div>
-          </article>
-        </div>
-        <div class="projects__more" data-aos="fade-up">
-          <a href="#" class="btn btn--secondary">Ver todos los proyectos</a>
         </div>
       </div>
     </section>
@@ -393,86 +787,31 @@
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <span class="section-header__label">Tecnologías</span>
-          <h2 class="section-header__title">Stack Tecnológico</h2>
+          <h2 class="section-header__title">Con qué está construido</h2>
           <p class="section-header__subtitle">
-            Trabajamos con las tecnologías más modernas y demandadas del mercado.
+            Un stack conservador y probado. Preferimos tecnología aburrida que lleve años funcionando
+            antes que la novedad del mes.
           </p>
         </div>
         <div class="technologies__carousel" data-aos="fade-up" data-aos-delay="100">
           <div class="technologies__track">
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">React</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Node.js</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Python</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">TypeScript</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Java</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Spring Boot</span></div>
             <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">PostgreSQL</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">MongoDB</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">AWS</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Docker</span></div>
             <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">React</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Node.js</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Python</span></div>
             <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">TypeScript</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">PostgreSQL</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">MongoDB</span></div>
-            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">AWS</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Redis</span></div>
             <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Docker</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">WhatsApp API</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Java</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Spring Boot</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">PostgreSQL</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">React</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">TypeScript</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Redis</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">Docker</span></div>
+            <div class="technologies__item"><span style="font-weight: bold; color: var(--color-text);">WhatsApp API</span></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials section" id="testimonios">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-header__label">Testimonios</span>
-          <h2 class="section-header__title">Lo que dicen nuestros clientes</h2>
-          <p class="section-header__subtitle">
-            La satisfacción de nuestros clientes es nuestra mayor recompensa.
-          </p>
-        </div>
-        <div class="testimonials__grid">
-          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-            <span class="testimonial-card__quote">"</span>
-            <p class="testimonial-card__content">
-              El equipo de Code218 superó todas nuestras expectativas. Entregaron un producto 
-              de calidad excepcional en tiempo récord. Sin duda volveremos a trabajar juntos.
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" style="background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">MC</div>
-              <div class="testimonial-card__info">
-                <span class="testimonial-card__name">María González</span>
-                <span class="testimonial-card__role">CEO, TechStartup</span>
-              </div>
-            </div>
-          </article>
-          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-            <span class="testimonial-card__quote">"</span>
-            <p class="testimonial-card__content">
-              Profesionales de primer nivel. La comunicación fue excelente durante todo el 
-              proyecto y el resultado final fue exactamente lo que necesitábamos.
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" style="background: var(--color-accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CR</div>
-              <div class="testimonial-card__info">
-                <span class="testimonial-card__name">Carlos Rodríguez</span>
-                <span class="testimonial-card__role">Director, LogisCorp</span>
-              </div>
-            </div>
-          </article>
-          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-            <span class="testimonial-card__quote">"</span>
-            <p class="testimonial-card__content">
-              Nuestra app móvil fue todo un éxito gracias a Code218. Su expertise técnico 
-              y atención al detalle marcaron la diferencia en nuestro lanzamiento.
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" style="background: var(--color-secondary); display: flex; align-items: center; justify-content: center; color: var(--color-text); font-weight: bold;">AL</div>
-              <div class="testimonial-card__info">
-                <span class="testimonial-card__name">Ana López</span>
-                <span class="testimonial-card__role">Product Manager, AppVentures</span>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -483,14 +822,14 @@
       <div class="cta__decoration cta__decoration--2"></div>
       <div class="container">
         <div class="cta__container" data-aos="fade-up">
-          <h2 class="cta__title">¿Listo para comenzar tu proyecto?</h2>
+          <h2 class="cta__title">¿Por cuál de las tres empezamos?</h2>
           <p class="cta__description">
-            Conversemos sobre tu idea y cómo podemos ayudarte a hacerla realidad. 
-            La primera consulta es sin compromiso.
+            Cuéntanos qué vendes y cómo lo manejas hoy. En 15 minutos te decimos si alguno de
+            nuestros productos te sirve — y si no, te lo decimos igual.
           </p>
           <div class="cta__buttons">
-            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n" target="_blank" class="btn btn--accent btn--lg">Solicitar Cotización</a>
-            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20agendar%20una%20llamada" target="_blank" class="btn btn--white btn--lg">Agendar Llamada</a>
+            <a href="https://wa.me/593992641539?text=Hola%20Code218%2C%20quiero%20agendar%20una%20llamada%20de%2015%20minutos" target="_blank" rel="noopener" class="btn btn--accent btn--lg">Agendar 15 minutos</a>
+            <a href="#contacto" class="btn btn--white btn--lg">Escribirnos</a>
           </div>
         </div>
       </div>
@@ -501,10 +840,10 @@
         <div class="contact__container">
           <div class="contact__info" data-aos="fade-right">
             <span class="contact__label">Contacto</span>
-            <h2 class="contact__title">Hablemos de tu proyecto</h2>
+            <h2 class="contact__title">Hablemos de tu caso</h2>
             <p class="contact__description">
-              Estamos aquí para ayudarte. Completa el formulario o contáctanos directamente 
-              por cualquiera de nuestros canales.
+              Completa el formulario o escríbenos directo por WhatsApp. Respondemos en horario
+              hábil, normalmente el mismo día.
             </p>
             <div class="contact__details">
               <div class="contact__detail">
@@ -528,9 +867,9 @@
                   </svg>
                 </div>
                 <div class="contact__detail-content">
-                  <span class="contact__detail-label">Teléfono</span>
+                  <span class="contact__detail-label">WhatsApp</span>
                   <span class="contact__detail-value">
-                    <a href="https://wa.me/593992641539" target="_blank">+593 99 264 1539</a>
+                    <a href="https://wa.me/593992641539" target="_blank" rel="noopener">+593 99 264 1539</a>
                   </span>
                 </div>
               </div>
@@ -548,17 +887,17 @@
               </div>
             </div>
             <div class="contact__social">
-              <a href="https://www.linkedin.com/in/acordova218" class="contact__social-link" aria-label="LinkedIn" target="_blank">
+              <a href="https://www.linkedin.com/in/acordova218" class="contact__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
-              <a href="https://x.com/adcordova00" class="contact__social-link" aria-label="Twitter" target="_blank">
+              <a href="https://x.com/adcordova00" class="contact__social-link" aria-label="Twitter" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                 </svg>
               </a>
-              <a href="https://github.com/adcordova00" class="contact__social-link" aria-label="GitHub" target="_blank">
+              <a href="https://github.com/adcordova00" class="contact__social-link" aria-label="GitHub" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
@@ -578,12 +917,21 @@
                 </div>
               </div>
               <div class="form-group">
+                <label for="interes" class="form-label form-label--required">¿Sobre qué quieres hablar?</label>
+                <select id="interes" name="interes" class="form-select" required>
+                  <option value="facturacion">API de Facturación Electrónica SRI</option>
+                  <option value="micromarket">MicroMarket — ventas por WhatsApp</option>
+                  <option value="medida">Software a medida</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
                 <label for="subject" class="form-label">Asunto</label>
                 <input type="text" id="subject" name="subject" class="form-input" placeholder="¿En qué podemos ayudarte?">
               </div>
               <div class="form-group">
                 <label for="message" class="form-label form-label--required">Mensaje</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntanos qué vendes y cómo lo manejas hoy..." required></textarea>
               </div>
               <button type="submit" class="btn btn--primary btn--lg btn--full contact__form-submit">
                 Enviar por WhatsApp
@@ -604,21 +952,21 @@
         <div class="footer__brand">
           <img src="assets/images/CODE218.png" alt="Code218" class="footer__logo">
           <p class="footer__description">
-            Transformamos ideas en soluciones digitales innovadoras. 
-            Tu socio tecnológico de confianza.
+            Facturación electrónica del SRI, ventas por WhatsApp y software a medida.
+            Desde Loja, para todo el Ecuador.
           </p>
           <div class="footer__social">
-            <a href="https://www.linkedin.com/in/acordova218" class="footer__social-link" aria-label="LinkedIn" target="_blank">
+            <a href="https://www.linkedin.com/in/acordova218" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </a>
-            <a href="https://x.com/adcordova00" class="footer__social-link" aria-label="Twitter" target="_blank">
+            <a href="https://x.com/adcordova00" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
               </svg>
             </a>
-            <a href="https://github.com/adcordova00" class="footer__social-link" aria-label="GitHub" target="_blank">
+            <a href="https://github.com/adcordova00" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
@@ -626,21 +974,21 @@
           </div>
         </div>
         <nav class="footer__nav">
-          <h4 class="footer__nav-title">Servicios</h4>
+          <h4 class="footer__nav-title">Productos</h4>
           <ul class="footer__nav-list">
-            <li><a href="#" class="footer__nav-link">Desarrollo Web</a></li>
-            <li><a href="#" class="footer__nav-link">Apps Móviles</a></li>
-            <li><a href="#" class="footer__nav-link">Software Empresarial</a></li>
-            <li><a href="#" class="footer__nav-link">Consultoría</a></li>
+            <li><a href="#facturacion" class="footer__nav-link">API de Facturación SRI</a></li>
+            <li><a href="https://facturacion.code218.org" target="_blank" rel="noopener" class="footer__nav-link">Documentación de la API</a></li>
+            <li><a href="#micromarket" class="footer__nav-link">MicroMarket</a></li>
+            <li><a href="https://micromarket.tech" target="_blank" rel="noopener" class="footer__nav-link">micromarket.tech</a></li>
           </ul>
         </nav>
         <nav class="footer__nav">
-          <h4 class="footer__nav-title">Empresa</h4>
+          <h4 class="footer__nav-title">Servicios</h4>
           <ul class="footer__nav-list">
-            <li><a href="#nosotros" class="footer__nav-link">Sobre Nosotros</a></li>
-            <li><a href="#proyectos" class="footer__nav-link">Proyectos</a></li>
-            <li><a href="#" class="footer__nav-link">Blog</a></li>
-            <li><a href="#" class="footer__nav-link">Carreras</a></li>
+            <li><a href="#fabrica" class="footer__nav-link">Software a medida</a></li>
+            <li><a href="#fabrica" class="footer__nav-link">APIs e integraciones</a></li>
+            <li><a href="#casos" class="footer__nav-link">Nuestro trabajo</a></li>
+            <li><a href="#nosotros" class="footer__nav-link">Cómo trabajamos</a></li>
           </ul>
         </nav>
         <div class="footer__nav">
@@ -656,12 +1004,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
             </svg>
-            <a href="https://wa.me/593992641539" target="_blank">+593 99 264 1539</a>
+            <a href="https://wa.me/593992641539" target="_blank" rel="noopener">+593 99 264 1539</a>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">© 2024 Code218. Todos los derechos reservados.</p>
+        <p class="footer__copyright">© 2026 Code218. Todos los derechos reservados.</p>
         <div class="footer__legal">
           <a href="privacidad.html" class="footer__legal-link">Política de Privacidad</a>
           <a href="terminos.html" class="footer__legal-link">Términos de Servicio</a>

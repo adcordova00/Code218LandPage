@@ -29,6 +29,8 @@
    Section Styles
    ======================================== */
 @import url('./sections/_hero.css');
+@import url('./sections/_solutions.css');
+@import url('./sections/_product.css');
 @import url('./sections/_services.css');
 @import url('./sections/_about.css');
 @import url('./sections/_projects.css');

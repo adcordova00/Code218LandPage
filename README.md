@@ -1,6 +1,12 @@
 # Code218 Landing Page
 
-Landing page moderna y profesional para Code218, empresa de desarrollo de software.
+Landing page de Code218. Funciona como **punto de entrada único a los tres productos**:
+la API de Facturación Electrónica SRI, MicroMarket y la fábrica de software a medida.
+
+Cada producto tiene su propia sección ancla y su propio CTA de WhatsApp con mensaje
+pre-rellenado distinto, de modo que al recibir el mensaje se sabe por qué puerta entró el
+prospecto. El formulario de contacto incluye además un campo "¿Sobre qué quieres hablar?"
+que viaja en el mensaje de WhatsApp.
 
 ![Code218](assets/images/logo.png)
 
@@ -73,15 +79,27 @@ Para que la página funcione correctamente, coloca los siguientes archivos en `a
 
 ## 📱 Secciones
 
-1. **Hero** - Presentación principal con estadísticas
-2. **Servicios** - 6 cards de servicios ofrecidos
-3. **Nosotros** - Información de la empresa
-4. **Proyectos** - Portfolio con filtros
-5. **Tecnologías** - Stack tecnológico (carrusel)
-6. **Testimonios** - Opiniones de clientes
-7. **CTA** - Llamada a la acción
-8. **Contacto** - Formulario de contacto
-9. **Footer** - Enlaces y redes sociales
+| # | Sección | Ancla | Para quién |
+|---|---------|-------|------------|
+| 1 | Hero | `#inicio` | Todos — posicionamiento común: "software que factura solo" |
+| 2 | Soluciones (3 puertas) | `#soluciones` | Derivador: manda a cada visitante a su producto |
+| 3 | API de Facturación SRI | `#facturacion` | SaaS, POS, agencias, ERPs |
+| 4 | MicroMarket | `#micromarket` | Restaurantes y comercios que venden por WhatsApp |
+| 5 | Fábrica de software | `#fabrica` | Empresas con un proceso propio |
+| 6 | Cómo trabajamos | `#nosotros` | Prospectos de ticket alto |
+| 7 | Nuestro trabajo | `#casos` | Prueba social (clientes sin nombrar) |
+| 8 | Tecnologías | — | Stack real: Java, Spring Boot, PostgreSQL, React, Redis, Docker |
+| 9 | CTA + Contacto | `#contacto` | Cierre |
+
+### Pendientes de contenido
+
+- **Testimonios**: la sección se retiró porque los que había eran de clientes ficticios.
+  Vuelve a entrar cuando haya citas reales con nombre y autorización.
+- **Casos**: los proyectos se describen sin nombrar al cliente. Al obtener permiso, se
+  pueden nombrar y añadir capturas reales.
+- **Métricas del hero**: se reemplazaron los contadores inventados (150 proyectos,
+  50 clientes, 5 años) por tres sellos verificables. Si hay cifras reales que publicar,
+  van ahí.
 
 ## ⚙️ Personalización
 
